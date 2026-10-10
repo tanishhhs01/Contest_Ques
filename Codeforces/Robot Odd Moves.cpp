@@ -2,15 +2,32 @@
 using namespace std;
 int main() {
     int test = 0;
-    cin >> test;
     while(test--) {
-    int a,b = 0;
-    cin >> a >> b;
-    if(abs(a-b) > 1) cout << -1 << endl;
-    else if(abs(a-b) == 0) cout << a << endl;
-    else {
-        cout << a + 1 << endl;
+        int a,b;
+        cin >> a >> b;
+        vector<int> nums(a,0);
+        for(int i = 0; i < a;i++) {
+            cin >> nums[i];
+        }
+        while(nums.empty()){
+        for(int i = 0;i < a;i++) {
+            if(nums[i] <= b) {
+                v.erase(v.begin() + i);
+                b++;
+            }
+        }
+        int max = 0;
+        for(int i = 0;i < a;i++) {
+            if(nums[max] > b) {
+                max = i;
+            }
+        }
+        int temp = nums[max];
+        nums.erase(v.begin() + max);
+        nums.push_back(temp / 2);
+        nums.push_back(temp / 2);
+        b++;
+     } 
+     return b;
     }
-}
-   return 0;
 }
