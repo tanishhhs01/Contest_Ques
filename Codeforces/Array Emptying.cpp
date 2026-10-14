@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <set>
 using namespace std;
 
 int main() {
@@ -23,9 +24,8 @@ int main() {
             if (*a.begin() <= k) {
                 a.erase(a.begin());
             } else {
-                auto it = prev(a.end());
-                int x = *it;
-                a.erase(it);
+                int x = *a.begin();
+                a.erase(a.begin());
                 a.insert(x / 2);
                 a.insert(x / 2);
             }
